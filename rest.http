@@ -1,0 +1,31 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzM2MjkyNTEsImV4cCI6MTY3MzYyOTI4MSwiYXVkIjoiNjNjMTc2N2U0OWIwNjQxYjA0MWIxNDgzIiwiaXNzIjoiYXV0aF9hcHAuY29tIn0.2492Tjo4pqBJyz_PvgW_fVdAFJ_ozueYA67Ip_qlGrE
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "test31@example.com",
+    "password": "123@test"
+}
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "test32@example.com",
+    "password": "123@test"
+}
+
+###
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzM2MjkyMDgsImV4cCI6MTcwNTE4NjgwOCwiYXVkIjoiNjNjMTc2N2U0OWIwNjQxYjA0MWIxNDgzIiwiaXNzIjoiYXV0aF9hcHAuY29tIn0.-rtjqNW76f0sPEKa3DmQG8lJGTEkn5vMdqGgn_dE_Vc"
+}
+
+###
+POST http://localhost:3000/auth/logout
